@@ -20,15 +20,15 @@
   <ion-slides pager="true" style="margin-top: 1px; width: 200px; height:100px;" [options]="slideOpts">
 
     <ion-slide>
-      <ion-img src="../assets/imagens/v3.jpg"></ion-img>
+      <ion-img src="../assets/imagens/vg2.jpg"></ion-img>
     </ion-slide>
 
     <ion-slide>
-      <ion-img src="../assets/imagens/v4.jpg"></ion-img>
+      <ion-img src="../assets/imagens/vg3.jpg"></ion-img>
     </ion-slide>
 
     <ion-slide>
-      <ion-img src="../assets/imagens/v5.jpg"></ion-img>
+      <ion-img src="../assets/imagens/vg4.jpg"></ion-img>
     </ion-slide>
 
 
@@ -42,7 +42,7 @@
   </ion-fab>
 
   <ion-fab vertical="center" horizontal="end" slot="fixed">
-    <ion-fab-button color="light" (click)="ListaDePromocoesCm()">
+    <ion-fab-button color="light" (click)=" ListaDePromocoesCm()">
       <img src="../../assets/imagens/seta9.png" class="promocao">
     </ion-fab-button>
   </ion-fab>
@@ -79,11 +79,13 @@
         <img src="../../assets/imagens/logovegano.png" class="logo">
         <ion-label>Cardápio</ion-label>
         <ion-label>VEGANO</ion-label>
+
       </ion-tab-button>
 
       <ion-tab-button (click)="viewPratoVegetariano()">
         <img src="../../assets/imagens/logovegetariano.png" class="logo">
         <ion-label>Cardápio</ion-label>
+        
       </ion-tab-button>
 
     </ion-tab-bar>

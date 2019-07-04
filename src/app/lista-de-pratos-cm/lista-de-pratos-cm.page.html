@@ -10,7 +10,7 @@
     <ion-icon slot="end" name="cart" class="css" (click)="Carrinho()"></ion-icon>
 
 
-  
+
 
 
     <ion-icon (click)="Home()" slot="start" name="arrow-back" class="css"></ion-icon>
@@ -97,6 +97,7 @@
 
       <ion-col size="6" *ngFor="let prato of ListaDePratosCm">
         <ion-card>
+       
           <ion-card-header>
             <img src="{{prato?.imagem}}">
             <ion-card-title class="titleconfig">{{prato?.nome}}</ion-card-title>
