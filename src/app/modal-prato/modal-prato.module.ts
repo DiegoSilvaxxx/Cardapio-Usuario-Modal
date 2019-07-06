@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListaDePratosCmPage } from './lista-de-pratos-cm.page';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ModalPratoPage } from '../modal-prato/modal-prato.page';
+import { ModalPratoPage } from './modal-prato.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ListaDePratosCmPage
+    component: ModalPratoPage
   }
 ];
 
@@ -21,10 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ListaDePratosCmPage,ModalPratoPage],
-  entryComponents: [ModalPratoPage]
+  declarations: [ModalPratoPage]
 })
-export class ListaDePratosCmPageModule {}
+export class ModalPratoPageModule {}

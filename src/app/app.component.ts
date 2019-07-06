@@ -25,7 +25,7 @@ export class AppComponent {
   
     {
       title: 'Cardápio',
-      url: '/lista-de-pratos',
+      url: '/lista-de-pratos-cm',
       icon: 'nutrition'
     },
 

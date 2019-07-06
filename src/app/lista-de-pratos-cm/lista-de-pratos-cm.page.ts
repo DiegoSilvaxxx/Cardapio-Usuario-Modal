@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 import * as firebase from 'firebase';
-import { NavParams, LoadingController } from '@ionic/angular';
+import { NavParams, LoadingController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { StorageService } from '../service/storage.service';
 import { Pedido } from '../model/pedido';
 import { Item } from '../model/item';
 import { ViewChild } from '@angular/core';
+import { ModalPratoPage } from 'src/app/modal-prato/modal-prato.page';
 
 @Component({
   selector: 'app-lista-de-pratos-cm',
@@ -37,16 +38,19 @@ export class ListaDePratosCmPage implements OnInit {
 
   constructor(public router: Router,
     public loadingController: LoadingController,
-    public storageServ: StorageService) {
+    public storageServ: StorageService,
+    private modalController: ModalController) {
 
     this.pedido = this.storageServ.getCart();
 
   }
 
+
   ngOnInit() {
     this.getList();
     console.log(this.ListaDePratosCm);
   }
+  
 
   addCarrinho(prato: Prato) {
 
@@ -250,5 +254,10 @@ export class ListaDePratosCmPage implements OnInit {
 
   }
 
-
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: ModalPratoPage
+    });
+    return await modal.present();
+  }
 }
