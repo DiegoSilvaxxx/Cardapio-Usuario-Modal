@@ -187,7 +187,7 @@ export class ListaDePratosVegetarianoCmPage implements OnInit {
     this.router.navigate(['/lista-de-pratos-vegetariano']);
   }
   Home() {
-    this.router.navigate(['/list']);
+    this.router.navigate(['/lista-de-pratos-vegano-cm']);
   }
   ViewPratoVegetariano(pratovegetariano: PratoVegetariano) {
     this.router.navigate(['/view-prato-vegetariano', { 'pratovegetariano': pratovegetariano.id }]);

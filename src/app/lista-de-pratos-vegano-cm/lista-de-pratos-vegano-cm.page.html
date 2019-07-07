@@ -1,20 +1,18 @@
 <ion-header>
-  <ion-toolbar color="dark">
 
-    <div class="div2">
-      <ion-title>
-        <img src="../../assets/imagens/logo2.png" class="logo3">
-      </ion-title>
-    </div>
-
-    <ion-icon slot="end" name="cart" class="css" (click)="Carrinho()"></ion-icon>
+    <ion-toolbar color ="dark">
 
 
-
-    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="css"></ion-icon>
-    <ion-icon slot="start" name="contact" class="css"></ion-icon>
-
-  </ion-toolbar>
+        <ion-icon (click)="Home()" slot="start" name="arrow-back" class="css"></ion-icon>
+    
+        <ion-icon slot="end" name="cart" class="css" (click)="Carrinho()"></ion-icon>
+    
+      
+    
+    
+        <ion-title>Pratos Veganos</ion-title>
+      </ion-toolbar>
+ 
 
 
   <ion-slides pager="true" style="margin-top: 1px; width: 200px; height:100px;" [options]="slideOpts">

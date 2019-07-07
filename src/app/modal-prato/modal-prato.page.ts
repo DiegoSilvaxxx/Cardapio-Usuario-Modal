@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-modal-prato',
   templateUrl: './modal-prato.page.html',
@@ -10,14 +11,19 @@ import { Router } from '@angular/router';
 })
 export class ModalPratoPage implements OnInit {
 
- 
-  constructor(private modalController: ModalController, public router: Router,) { }
+
+  constructor(private modalController: ModalController,
+    public router: Router,private modalCtrl:ModalController) { }
+
+
+
 
   ngOnInit() {
+
   }
 
-  ListaDePratosCm() {
-    this.router.navigate(['/lista-de-pratos-cm']);
+  closeModal() {
+    this.modalCtrl.dismiss();
   }
-
+ 
 }
