@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-
 import * as firebase from 'firebase';
-import { NavParams, LoadingController } from '@ionic/angular';
+import { NavParams, LoadingController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,6 +12,7 @@ import { Pedido } from '../model/pedido';
 import { Item } from '../model/item';
 import { ViewChild } from '@angular/core';
 
+import { ModalPratoVegetarianoPage } from 'src/app/modal-prato-vegetariano/modal-prato-vegetariano.page';
 
 @Component({
   selector: 'app-lista-de-pratos-vegetariano-cm',
@@ -40,7 +40,8 @@ export class ListaDePratosVegetarianoCmPage implements OnInit {
 
   constructor(public router: Router,
     public loadingController: LoadingController,
-    public storageServ: StorageService) {
+    public storageServ: StorageService,
+    private modalController: ModalController) {
 
     this.pedido = this.storageServ.getCart();
 
@@ -254,6 +255,13 @@ export class ListaDePratosVegetarianoCmPage implements OnInit {
 
 
   }
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: ModalPratoVegetarianoPage
+    });
+    return await modal.present();
+  }
+
 
 
 }
